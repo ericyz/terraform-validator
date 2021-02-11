@@ -24,7 +24,7 @@ func TestReadPlannedAssetsCoverage(t *testing.T) {
 	cases := []struct {
 		name string
 	}{
-		{name: "example_bigquery_dataset"},
+		{name: "example_bigquery_table"},
 		{name: "example_compute_disk"},
 		{name: "example_compute_firewall"},
 		{name: "example_compute_instance"},

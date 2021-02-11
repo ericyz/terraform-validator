@@ -1,0 +1,174 @@
+{
+  "format_version": "0.1",
+  "terraform_version": "0.13.5",
+  "planned_values": {
+    "root_module": {
+      "resources": [
+        {
+          "address": "google_bigquery_table.default",
+          "mode": "managed",
+          "type": "google_bigquery_table",
+          "name": "default",
+          "provider_name": "registry.terraform.io/hashicorp/google",
+          "schema_version": 0,
+          "values": {
+            "clustering": null,
+            "dataset_id": "test-dataset",
+            "description": "test description",
+            "encryption_configuration": [
+              {
+                "kms_key_name": "projects/{{.Provider.project}}/locations/australia-southeast1/keyRings/default_kms_keyring_name/cryptoKeys/default_kms_key_name"
+              }
+            ],
+            "expiration_time": 100,
+            "external_data_configuration": [],
+            "friendly_name": null,
+            "labels": {
+              "test-key": "test-alue"
+            },
+            "materialized_view": [],
+            "range_partitioning": [],
+            "table_id": "test-table",
+            "time_partitioning": [
+              {
+                "expiration_ms": 3600000,
+                "field": null,
+                "require_partition_filter": null,
+                "type": "DAY"
+              }
+            ],
+            "view": []
+          }
+        }
+      ]
+    }
+  },
+  "resource_changes": [
+    {
+      "address": "google_bigquery_table.default",
+      "mode": "managed",
+      "type": "google_bigquery_table",
+      "name": "default",
+      "provider_name": "registry.terraform.io/hashicorp/google",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "clustering": null,
+          "dataset_id": "test-dataset",
+          "description": "test description",
+          "encryption_configuration": [
+            {
+              "kms_key_name": "projects/{{.Provider.project}}/locations/australia-southeast1/keyRings/default_kms_keyring_name/cryptoKeys/default_kms_key_name"
+            }
+          ],
+          "expiration_time": 100,
+          "external_data_configuration": [],
+          "friendly_name": null,
+          "labels": {
+            "test-key": "test-alue"
+          },
+          "materialized_view": [],
+          "range_partitioning": [],
+          "table_id": "test-table",
+          "time_partitioning": [
+            {
+              "expiration_ms": 3600000,
+              "field": null,
+              "require_partition_filter": null,
+              "type": "DAY"
+            }
+          ],
+          "view": []
+        },
+        "after_unknown": {
+          "creation_time": true,
+          "encryption_configuration": [
+            {}
+          ],
+          "etag": true,
+          "external_data_configuration": [],
+          "id": true,
+          "labels": {},
+          "last_modified_time": true,
+          "location": true,
+          "materialized_view": [],
+          "num_bytes": true,
+          "num_long_term_bytes": true,
+          "num_rows": true,
+          "project": true,
+          "range_partitioning": [],
+          "schema": true,
+          "self_link": true,
+          "time_partitioning": [
+            {}
+          ],
+          "type": true,
+          "view": []
+        }
+      }
+    }
+  ],
+  "configuration": {
+    "provider_config": {
+      "google": {
+        "name": "google",
+        "expressions": {
+          "project": {
+            "constant_value": "{{.Provider.project}}"
+          }
+        }
+      }
+    },
+    "root_module": {
+      "resources": [
+        {
+          "address": "google_bigquery_table.default",
+          "mode": "managed",
+          "type": "google_bigquery_table",
+          "name": "default",
+          "provider_config_key": "google",
+          "expressions": {
+            "dataset_id": {
+              "constant_value": "test-dataset"
+            },
+            "description": {
+              "constant_value": "test description"
+            },
+            "encryption_configuration": [
+              {
+                "kms_key_name": {
+                  "constant_value": "projects/{{.Provider.project}}/locations/australia-southeast1/keyRings/default_kms_keyring_name/cryptoKeys/default_kms_key_name"
+                }
+              }
+            ],
+            "expiration_time": {
+              "constant_value": 100
+            },
+            "labels": {
+              "constant_value": {
+                "test-key": "test-alue"
+              }
+            },
+            "table_id": {
+              "constant_value": "test-table"
+            },
+            "time_partitioning": [
+              {
+                "expiration_ms": {
+                  "constant_value": 3600000
+                },
+                "type": {
+                  "constant_value": "DAY"
+                }
+              }
+            ]
+          },
+          "schema_version": 0
+        }
+      ]
+    }
+  }
+}

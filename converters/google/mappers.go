@@ -58,6 +58,7 @@ func mappers() map[string][]mapper {
 		"google_container_cluster":     {{convert: converter.GetContainerClusterCaiObject}},
 		"google_container_node_pool":   {{convert: converter.GetContainerNodePoolCaiObject}},
 		"google_bigquery_dataset":      {{convert: converter.GetBigQueryDatasetCaiObject}},
+		"google_bigquery_table":        {{convert: converter.GetBigQueryTableCaiObject}},
 		"google_spanner_instance":      {{convert: converter.GetSpannerInstanceCaiObject}},
 		"google_project_service":       {{convert: converter.GetServiceUsageCaiObject}},
 		"google_pubsub_topic":          {{convert: converter.GetPubsubTopicCaiObject}},
