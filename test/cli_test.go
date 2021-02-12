@@ -65,7 +65,7 @@ func TestCLI(t *testing.T) {
 		{name: "example_compute_instance"},
 		{name: "example_container_cluster"},
 		{name: "example_organization_iam_binding"},
-		{name: "example_organization_iam_member"},
+		{name: "example_cloudfunctions_function"},
 		{name: "example_organization_iam_policy"},
 		{name: "example_pubsub_topic"},
 		{name: "example_project"},

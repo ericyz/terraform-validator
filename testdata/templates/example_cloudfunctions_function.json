@@ -1,0 +1,21 @@
+[
+  {
+    "name": "//cloudfunctions.googleapis.com/projects/{{.Provider.project}}/locations/us-central1/functions/function-test",
+    "asset_type": "cloudfunctions.googleapis.com/CloudFunction",
+    "ancestry_path": "organization/794307898434/folder/535764598281/project/{{.Provider.project}}",
+    "resource": {
+      "version": "v1",
+      "discovery_document_uri": "https://cloudfunctions.googleapis.com/$discovery/rest",
+      "discovery_name": "CloudFunction",
+      "parent": "//cloudresourcemanager.googleapis.com/projects/{{.Provider.project}}",
+      "data": {
+        "availableMemoryMb": 128,
+        "description": "My function",
+        "entryPoint": "test-endpoint",
+        "ingressSettings": "ALLOW_ALL",
+        "name": "function-test",
+        "runtime": "nodejs10"
+      }
+    }
+  }
+]

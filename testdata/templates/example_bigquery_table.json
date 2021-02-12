@@ -11,26 +11,24 @@
             "data": {
                 "description": "test description",
                 "encryptionConfiguration": {
-                    "kmsKeyName": {
-                        "value": "projects/{{.Provider.project}}/locations/australia-southeast1/keyRings/default_kms_keyring_name/cryptoKeys/default_kms_key_name"
-                    }
-                },
-                "expirationTime": {
-                    "value": 100
-                },
-                "labels": {
-                    "test-key": "test-alue"
-                },
-                "tableReference": {
-                    "datasetId": "test-dataset",
-                    "tableId": "test-dataset"
-                },
-                "timePartitioning": {
-                    "expirationMs": {
-                        "value": 3600000
-                    },
-                    "type": "DAY"
+                    "kmsKeyName": "projects/{{.Provider.project}}/locations/australia-southeast1/keyRings/default_kms_keyring_name/cryptoKeys/default_kms_key_name"
                 }
+            },
+            "expirationTime": {
+                "value": 100
+            },
+            "labels": {
+                "test-key": "test-alue"
+            },
+            "tableReference": {
+                "datasetId": "test-dataset",
+                "tableId": "test-dataset"
+            },
+            "timePartitioning": {
+                "expirationMs": {
+                    "value": 3600000
+                },
+                "type": "DAY"
             }
         }
     }

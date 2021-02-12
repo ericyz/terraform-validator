@@ -1,0 +1,135 @@
+{
+  "format_version": "0.1",
+  "terraform_version": "0.13.5",
+  "planned_values": {
+    "root_module": {
+      "resources": [
+        {
+          "address": "google_cloudfunctions_function.function",
+          "mode": "managed",
+          "type": "google_cloudfunctions_function",
+          "name": "function",
+          "provider_name": "registry.terraform.io/hashicorp/google",
+          "schema_version": 0,
+          "values": {
+            "available_memory_mb": 128,
+            "build_environment_variables": null,
+            "description": "My function",
+            "entry_point": "test-endpoint",
+            "environment_variables": null,
+            "ingress_settings": "ALLOW_ALL",
+            "labels": null,
+            "max_instances": 0,
+            "name": "function-test",
+            "project": "{{.Provider.project}}",
+            "runtime": "nodejs10",
+            "source_archive_bucket": "test-bucket",
+            "source_archive_object": "test-object",
+            "source_repository": [],
+            "timeout": 60,
+            "timeouts": null,
+            "trigger_http": true,
+            "vpc_connector": null
+          }
+        }
+      ]
+    }
+  },
+  "resource_changes": [
+    {
+      "address": "google_cloudfunctions_function.function",
+      "mode": "managed",
+      "type": "google_cloudfunctions_function",
+      "name": "function",
+      "provider_name": "registry.terraform.io/hashicorp/google",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "available_memory_mb": 128,
+          "build_environment_variables": null,
+          "description": "My function",
+          "entry_point": "test-endpoint",
+          "environment_variables": null,
+          "ingress_settings": "ALLOW_ALL",
+          "labels": null,
+          "max_instances": 0,
+          "name": "function-test",
+          "project": "{{.Provider.project}}",
+          "runtime": "nodejs10",
+          "source_archive_bucket": "test-bucket",
+          "source_archive_object": "test-object",
+          "source_repository": [],
+          "timeout": 60,
+          "timeouts": null,
+          "trigger_http": true,
+          "vpc_connector": null
+        },
+        "after_unknown": {
+          "event_trigger": true,
+          "https_trigger_url": true,
+          "id": true,
+          "region": true,
+          "service_account_email": true,
+          "source_repository": [],
+          "vpc_connector_egress_settings": true
+        }
+      }
+    }
+  ],
+  "configuration": {
+    "provider_config": {
+      "google": {
+        "name": "google",
+        "expressions": {
+          "project": {
+            "constant_value": "{{.Provider.project}}"
+          }
+        }
+      }
+    },
+    "root_module": {
+      "resources": [
+        {
+          "address": "google_cloudfunctions_function.function",
+          "mode": "managed",
+          "type": "google_cloudfunctions_function",
+          "name": "function",
+          "provider_config_key": "google",
+          "expressions": {
+            "available_memory_mb": {
+              "constant_value": 128
+            },
+            "description": {
+              "constant_value": "My function"
+            },
+            "entry_point": {
+              "constant_value": "test-endpoint"
+            },
+            "name": {
+              "constant_value": "function-test"
+            },
+            "project": {
+              "constant_value": "{{.Provider.project}}"
+            },
+            "runtime": {
+              "constant_value": "nodejs10"
+            },
+            "source_archive_bucket": {
+              "constant_value": "test-bucket"
+            },
+            "source_archive_object": {
+              "constant_value": "test-object"
+            },
+            "trigger_http": {
+              "constant_value": true
+            }
+          },
+          "schema_version": 0
+        }
+      ]
+    }
+  }
+}
