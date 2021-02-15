@@ -1,0 +1,35 @@
+[
+    {
+        "name": "//bigquery.googleapis.com/projects/{{.Provider.project}}/datasets/test-dataset/tables/test-table",
+        "asset_type": "bigquery.googleapis.com/Table",
+        "ancestry_path": "{{.Ancestry}}/project/{{.Provider.project}}",
+        "resource": {
+            "version": "v2",
+            "discovery_document_uri": "https://www.googleapis.com/discovery/v1/apis/bigquery/v2/rest",
+            "discovery_name": "Table",
+            "parent": "//cloudresourcemanager.googleapis.com/projects/{{.Provider.project}}",
+            "data": {
+                "description": "test description",
+                "encryptionConfiguration": {
+                    "kmsKeyName": "projects/{{.Provider.project}}/locations/australia-southeast1/keyRings/default_kms_keyring_name/cryptoKeys/default_kms_key_name"
+                }
+            },
+            "expirationTime": {
+                "value": 100
+            },
+            "labels": {
+                "test-key": "test-alue"
+            },
+            "tableReference": {
+                "datasetId": "test-dataset",
+                "tableId": "test-dataset"
+            },
+            "timePartitioning": {
+                "expirationMs": {
+                    "value": 3600000
+                },
+                "type": "DAY"
+            }
+        }
+    }
+]

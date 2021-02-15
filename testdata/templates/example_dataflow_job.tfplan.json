@@ -1,0 +1,152 @@
+{
+  "format_version": "0.1",
+  "terraform_version": "0.13.5",
+  "planned_values": {
+    "root_module": {
+      "resources": [
+        {
+          "address": "google_dataflow_job.test",
+          "mode": "managed",
+          "type": "google_dataflow_job",
+          "name": "test",
+          "provider_name": "registry.terraform.io/hashicorp/google",
+          "schema_version": 0,
+          "values": {
+            "additional_experiments": null,
+            "ip_configuration": "WORKER_IP_PUBLIC",
+            "kms_key_name": "projects/test-project/locations/australia-southeast1keyRings/test-keyring/crytoKeys/test",
+            "labels": null,
+            "machine_type": "test-small-size",
+            "max_workers": null,
+            "name": "test-df-job",
+            "network": "default",
+            "on_delete": "drain",
+            "parameters": {
+              "baz": "qux",
+              "foo": "bar"
+            },
+            "region": "australia-southeast1",
+            "service_account_email": "test@testorg.com",
+            "subnetwork": "regions/australia-southeast1/subnetworks/test",
+            "temp_gcs_location": "gs://my-bucket-test/tmp_dir",
+            "template_gcs_path": "gs://my-bucket-test/templates/template_file",
+            "timeouts": null,
+            "transform_name_mapping": null,
+            "zone": null
+          }
+        }
+      ]
+    }
+  },
+  "resource_changes": [
+    {
+      "address": "google_dataflow_job.test",
+      "mode": "managed",
+      "type": "google_dataflow_job",
+      "name": "test",
+      "provider_name": "registry.terraform.io/hashicorp/google",
+      "change": {
+        "actions": [
+          "create"
+        ],
+        "before": null,
+        "after": {
+          "additional_experiments": null,
+          "ip_configuration": "WORKER_IP_PUBLIC", //validate
+          "kms_key_name": "projects/test-project/locations/australia-southeast1keyRings/test-keyring/crytoKeys/test",  //validate
+          "labels": null,
+          "machine_type": "test-small-size",
+          "max_workers": null,
+          "name": "test-df-job",
+          "network": "default",
+          "on_delete": "drain",
+          "parameters": {
+            "baz": "qux",
+            "foo": "bar"
+          },
+          "region": "australia-southeast1",
+          "service_account_email": "test@testorg.com",
+          "subnetwork": "regions/australia-southeast1/subnetworks/test",
+          "temp_gcs_location": "gs://my-bucket-test/tmp_dir",
+          "template_gcs_path": "gs://my-bucket-test/templates/template_file",
+          "timeouts": null,
+          "transform_name_mapping": null,
+          "zone": null
+        },
+        "after_unknown": {
+          "id": true,
+          "job_id": true,
+          "parameters": {},
+          "project": true,
+          "state": true,
+          "type": true
+        }
+      }
+    }
+  ],
+  "configuration": {
+    "provider_config": {
+      "google": {
+        "name": "google",
+        "expressions": {
+          "credentials": {
+            "constant_value": "/Users/zhaoe/Projects/pso/terraform-validator/test.json"
+          }
+        }
+      }
+    },
+    "root_module": {
+      "resources": [
+        {
+          "address": "google_dataflow_job.test",
+          "mode": "managed",
+          "type": "google_dataflow_job",
+          "name": "test",
+          "provider_config_key": "google",
+          "expressions": {
+            "ip_configuration": {
+              "constant_value": "WORKER_IP_PUBLIC"
+            },
+            "kms_key_name": {
+              "constant_value": "projects/test-project/locations/australia-southeast1keyRings/test-keyring/crytoKeys/test"
+            },
+            "machine_type": {
+              "constant_value": "test-small-size"
+            },
+            "name": {
+              "constant_value": "test-df-job"
+            },
+            "network": {
+              "constant_value": "default"
+            },
+            "on_delete": {
+              "constant_value": "drain"
+            },
+            "parameters": {
+              "constant_value": {
+                "baz": "qux",
+                "foo": "bar"
+              }
+            },
+            "region": {
+              "constant_value": "australia-southeast1"
+            },
+            "service_account_email": {
+              "constant_value": "test@testorg.com"
+            },
+            "subnetwork": {
+              "constant_value": "regions/australia-southeast1/subnetworks/test"
+            },
+            "temp_gcs_location": {
+              "constant_value": "gs://my-bucket-test/tmp_dir"
+            },
+            "template_gcs_path": {
+              "constant_value": "gs://my-bucket-test/templates/template_file"
+            }
+          },
+          "schema_version": 0
+        }
+      ]
+    }
+  }
+}

@@ -32,7 +32,7 @@ func TestReadPlannedAssetsCoverage(t *testing.T) {
 		{name: "example_organization_iam_binding"},
 		{name: "example_organization_iam_member"},
 		{name: "example_cloudfunctions_function"},
-		{name: "example_pubsub_topic"},
+		{name: "example_dataflow_job"},
 		{name: "example_project"},
 		{name: "example_project_in_org"},
 		{name: "example_project_in_folder"},

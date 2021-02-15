@@ -53,6 +53,8 @@ func mappers() map[string][]mapper {
 		"google_compute_firewall":      {{convert: converter.GetComputeFirewallCaiObject}},
 		"google_compute_disk":          {{convert: converter.GetComputeDiskCaiObject}},
 		"google_compute_instance":      {{convert: converter.GetComputeInstanceCaiObject}},
+		"google_cloudfunctions_function":          {{convert: converter.GetCloudFunctionsFunctionCaiObject}},
+		"google_dataflow_job":          {{convert: converter.GetDataFlowJobCaiObject}},
 		"google_storage_bucket":        {{convert: converter.GetStorageBucketCaiObject}},
 		"google_sql_database_instance": {{convert: converter.GetSQLDatabaseInstanceCaiObject}},
 		"google_container_cluster":     {{convert: converter.GetContainerClusterCaiObject}},
@@ -62,7 +64,7 @@ func mappers() map[string][]mapper {
 		"google_spanner_instance":      {{convert: converter.GetSpannerInstanceCaiObject}},
 		"google_project_service":       {{convert: converter.GetServiceUsageCaiObject}},
 		"google_pubsub_topic":          {{convert: converter.GetPubsubTopicCaiObject}},
-		"google_cloudfunctions_function":          {{convert: converter.GetCloudFunctionsFunctionCaiObject}},
+		
 
 		// Terraform resources of type "google_project" have a 1:N relationship with CAI assets.
 		"google_project": {
